@@ -42,7 +42,6 @@ export default class SignUp extends Component {
             }) : Toast.info("error");
             })
             .then(data => console.log(data));
-        // window.location = "/retrieve"
     }
 
     render() {
@@ -75,7 +74,7 @@ export default class SignUp extends Component {
                         type="email"
                         className="form-control"
                         name='username'
-                        placeholder="Enter email"
+                        placeholder="Enter user name"
                         value={this.state.username}
                         onChange={e => this.handleChange(e)}
                     />
