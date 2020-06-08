@@ -35,7 +35,7 @@ class Home extends Component {
 		fetch('http://localhost:4000/users/authenticate', requestOptions)
 			.then(response => {
 				response.status === 200 ? Toast.info('Successfully logged in...', 3000, () => {
-					// window.location = "/sign-in"
+					window.location = "/dashboard"
 				}) : Toast.info("error");
 			})
 			.then(data => console.log(data));
@@ -70,7 +70,7 @@ class Home extends Component {
 				<button type="submit" className="btn btn-primary btn-block" onClick={(e) => this.onSubmit(e)}
 				>Submit</button>
 				<p className="forgot-password text-right">
-					Forgot <a href="#">password?</a>
+					Register <a href="/sign-up">New user?</a>
 				</p>
 			</form>
 		);

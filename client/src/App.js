@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/Home";
 import SignUp from "./components/Signup";
+import Dashboard from "./components/dashboard";
+import Loan from "./components/ApplyLoan/index";
 
 function App() {
   return (<Router>
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+      {/* <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
@@ -22,7 +24,7 @@ function App() {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       <div className="auth-wrapper">
         <div className="auth-inner">
@@ -30,6 +32,8 @@ function App() {
             <Route exact path='/' component={Login} />
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/loan" component={Loan} />
           </Switch>
         </div>
       </div>
