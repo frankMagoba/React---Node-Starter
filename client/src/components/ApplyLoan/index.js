@@ -31,7 +31,80 @@ function getSteps() {
 function getStepContent(step) {
     switch (step) {
         case 0:
-            return <Basics/>;
+            return (
+                <>
+                    <form>
+                        <p className="forgot-password text-right">
+                            All fields are required
+                  </p>
+                        <div className="form-group">
+                            <label>First Name</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter first name"
+                                name="fname"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Middle Name</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter middle name"
+                                name="mname"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Last Name</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter last name"
+                                name="lname"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>ID Number</label>
+                            <input
+                                type="number"
+                                className="form-control"
+                                placeholder="Enter ID number"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Date of birth</label>
+                            <input
+                                type="date"
+                                className="form-control"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="btn btn-primary btn-block"
+                            onClick={(e) => this.onSubmit(e)}
+                        >
+                            Submit
+                  </button>
+                    </form>
+                </>
+            );
         case 1:
             return 'An ad group contains one or more ads which target a shared set of keywords.';
         case 2:
