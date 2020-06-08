@@ -7,7 +7,8 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Basics from "./Basic Details/basic";
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-    return ['Basic Details', 'Create an ad group', 'Create an ad'];
+    return ['Applicant Details', 'Loan Details', 'Guarantor Details'];
 }
 
 function getStepContent(step) {
@@ -94,24 +95,118 @@ function getStepContent(step) {
                             //   onChange={(e) => this.handleChange(e)}
                             />
                         </div>
-
-                        <button
-                            type="submit"
-                            className="btn btn-primary btn-block"
-                            onClick={(e) => this.onSubmit(e)}
-                        >
-                            Submit
-                  </button>
                     </form>
                 </>
             );
         case 1:
-            return 'An ad group contains one or more ads which target a shared set of keywords.';
+            return (
+                <>
+                    <form>
+                        <p className="forgot-password text-right">
+                            All fields are required
+                  </p>
+                        <div className="form-group">
+                            <label>Date of Application</label>
+                            <input
+                                type="date"
+                                className="form-control"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Amount</label>
+                            <input
+                                type="number"
+                                className="form-control"
+                                placeholder="Enter loan amount"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+                    </form>
+                </>
+            );
         case 2:
-            return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+            return (
+                <>
+                    <form>
+                        <p className="forgot-password text-right">
+                            All fields are required
+                  </p>
+                        <div className="form-group">
+                            <label>First Name</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter first name"
+                                name="fname"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Middle Name</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter middle name"
+                                name="mname"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>Last Name</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter last name"
+                                name="lname"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label>ID Number</label>
+                            <input
+                                type="number"
+                                className="form-control"
+                                placeholder="Enter ID number"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Date of birth</label>
+                            <input
+                                type="date"
+                                className="form-control"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label>Relationship</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                name="idno"
+                            //   value={this.state.username}
+                            //   onChange={(e) => this.handleChange(e)}
+                            />
+                        </div>
+                    </form>
+                </>
+            );
         default:
             return 'Unknown step';
     }
