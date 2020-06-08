@@ -7,6 +7,12 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import {classes} from "../Dashboard/themer";
+import Toolbar from "@material-ui/core/Toolbar";
+import AppBar from "@material-ui/core/AppBar";
+import MeetingRoomTwoToneIcon from '@material-ui/icons/MeetingRoomTwoTone';
+import LibraryBooksTwoToneIcon from '@material-ui/icons/LibraryBooksTwoTone';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +40,19 @@ function getStepContent(step) {
         case 0:
             return (
                 <>
+                 <AppBar position="relative">
+            <Toolbar>
+              <LibraryBooksTwoToneIcon className={classes.icon} />
+              <Typography variant="h6" color="inherit" noWrap>
+                Loans
+              </Typography> {""}
+              <MeetingRoomTwoToneIcon className={classes.icons} />
+              <Typography variant="h6" color="inherit" noWrap>
+              <a href="/sign-in">Logout</a>
+              </Typography>
+            </Toolbar>
+        
+          </AppBar>
                     <form>
                         <p className="forgot-password text-right">
                             All fields are required

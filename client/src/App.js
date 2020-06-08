@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/Home";
 import SignUp from "./components/Signup";
-import Dashboard from "./components/dashboard";
+import Dashboard from "./components/Dashboard/dashboard";
 import Loan from "./components/ApplyLoan/index";
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
         </div>
       </nav> */}
 
-      <div className="auth-wrapper">
-        <div className="auth-inner">
+      <div >
+        <div>
           <Switch>
             <Route exact path='/' component={Login} />
             <Route path="/sign-in" component={Login} />
@@ -37,6 +37,7 @@ function App() {
           </Switch>
         </div>
       </div>
+      
     </div></Router>
   );
 }
