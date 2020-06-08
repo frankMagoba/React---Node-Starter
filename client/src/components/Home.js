@@ -48,13 +48,14 @@ class Home extends Component {
 		};
 		fetch("http://localhost:4000/users/authenticate", requestOptions)
 			.then((response) => {
+				console.log(response);
 				response.status === 200
 					? Toast.info("Successfully logged in...", 3000, () => {
 						window.location = "/dashboard";
 					})
-					: Toast.info("error");
+					: Toast.info(response.statusText);
 			})
-			.then((data) => console.log(data));
+			.then((data) => console.log("You in!"));
 	};
 
 
@@ -80,36 +81,6 @@ class Home extends Component {
 			},
 		}));
 		return (
-			// <form>
-			// 	<h3>Sign In</h3>
-
-			// 	<div className="form-group">
-			// 		<label>User name</label>
-			// 		<input type="email" className="form-control" placeholder="Enter user name" name='username'
-			// 			value={this.state.username}
-			// 			onChange={e => this.handleChange(e)} />
-			// 	</div>
-
-			// 	<div className="form-group">
-			// 		<label>Password</label>
-			// 		<input type="password" className="form-control" placeholder="Enter password" name='password'
-			// 			value={this.state.password}
-			// 			onChange={e => this.handleChange(e)} />
-			// 	</div>
-
-			// 	<div className="form-group">
-			// 		<div className="custom-control custom-checkbox">
-			// 			<input type="checkbox" className="custom-control-input" id="customCheck1" />
-			// 			<label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-			// 		</div>
-			// 	</div>
-
-			// 	<button type="submit" className="btn btn-primary btn-block" onClick={(e) => this.onSubmit(e)}
-			// 	>Log in</button>
-			// 	<p className="forgot-password text-right">
-			// 		Register <a href="/sign-up">New user?</a>
-			// 	</p>
-			// </form>
 			<>
 				<Container component="main" maxWidth="xs">
 					<CssBaseline />
@@ -175,9 +146,6 @@ class Home extends Component {
 							</Grid>
 						</form>
 					</div>
-					<Box mt={8}>
-						{/* <Copyright /> */}
-					</Box>
 				</Container>
 			</>
 		);
