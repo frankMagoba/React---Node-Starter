@@ -1,3 +1,3 @@
 # Premium Project
 
-Loan collector Software
+React Node starter boilerplate from scratch
