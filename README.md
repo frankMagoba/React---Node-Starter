@@ -1,4 +1,4 @@
-# Premium Project
+# React Node
 
 React Node starter boilerplate from scratch
 
